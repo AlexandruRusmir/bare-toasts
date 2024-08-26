@@ -1,3 +1,3 @@
-#Built-in Browser AI
+# Built-in Browser AI
 
-Node Package meant to be access built-in AI features using a common interface, no matter the browser
+Node Package meant to be access browser built-in AI APIs, using the same interface, no matter the browser.
