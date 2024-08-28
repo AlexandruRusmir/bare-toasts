@@ -1,19 +1,25 @@
 {
-    "name": "builtin-browser-ai",
+    "name": "bare-toasts",
     "version": "0.0.1",
-    "description": "Node Package meant to be access browser built-in AI APIs, using the same interface, no matter the browser.",
+    "description": "A lightweight, framework-agnostic, customizable toast library.",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "repository": {
-        "url": "https://github.com/AlexandruRusmir/builtin-browser-ai"
+        "url": "https://github.com/AlexandruRusmir/bare-toasts"
     },
     "scripts": {
         "build": "tsup"
     },
     "keywords": [
-        "built-in browser ai",
-        "browser ai"
+        "toast",
+        "notification",
+        "framework-agnostic",
+        "popup",
+        "alert",
+        "message",
+        "lightweight",
+        "customizable"
     ],
     "author": "alexandru-rusmir",
     "license": "MIT",
