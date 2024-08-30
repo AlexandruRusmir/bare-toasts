@@ -2,9 +2,13 @@
     "name": "bare-toasts",
     "version": "0.0.1",
     "description": "A lightweight, framework-agnostic, customizable toast library.",
-    "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs"
+        }
+    },
     "repository": {
         "url": "https://github.com/AlexandruRusmir/bare-toasts"
     },

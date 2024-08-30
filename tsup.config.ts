@@ -1,7 +1,8 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-    format: ["cjs", "esm"],
+    minify: true,
+    format: ["esm"],
     entry: ["src/index.ts"],
     dts: true,
     shims: true,
