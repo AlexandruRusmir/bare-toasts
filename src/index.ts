@@ -1,2 +1,2 @@
 export { ToastManager } from "./toastManager";
-export type { ToastOptions } from "./types";
+export type { ToastOptions, ToastTypes, ToastPositions } from "./types";
