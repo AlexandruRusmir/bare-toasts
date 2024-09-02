@@ -46,7 +46,7 @@ export const styles = `
     background-color: #333;
     color: #fff;
     padding: 0.625rem;
-    border-radius: 0.3125rem;
+    border-radius: 0.5rem;
     opacity: 0;
     animation: slide-in 0.5s forwards;
 }

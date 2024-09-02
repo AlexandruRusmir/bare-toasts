@@ -7,8 +7,8 @@ export const applyStyles = (
     Object.assign(element.style, styles);
 };
 
-export function injectStyles(): void {
+export const injectStyles = (): void => {
     const styleElement = document.createElement("style");
     styleElement.innerHTML = styles;
     document.head.appendChild(styleElement);
-}
+};
