@@ -1,6 +1,9 @@
-export const DEFAULT_TOAST_TYPE = "info";
+import { ToastTypes } from "./types";
+
+export const DEFAULT_TOAST_TYPE: ToastTypes = "normal";
 export const DEFAULT_TOAST_DURATION = 3000;
-export const DEFAULT_TOAST_POSITION = "bottom-right";
+export const DEFAULT_TOAST_POSITION: ToastPositions = "bottom-right";
+export const DEFAULT_SHOW_ICON = true;
 
 export const TOAST_CONTAINER_CLASS = "toast-container";
 export const TOAST_CLASS = "default-toast";

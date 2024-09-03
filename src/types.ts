@@ -1,4 +1,4 @@
-export type ToastTypes = "success" | "info" | "warning" | "error";
+export type ToastTypes = "normal" | "success" | "info" | "warning" | "error";
 export type ToastPositions =
     | "top-left"
     | "top-right"
@@ -10,8 +10,9 @@ export type ToastPositions =
 export interface ToastOptions {
     message: string;
     type?: ToastTypes;
+    position?: ToastPositions;
     duration?: number;
+    showIcon?: boolean;
     className?: string;
     styles?: Partial<CSSStyleDeclaration>;
-    position?: ToastPositions;
 }

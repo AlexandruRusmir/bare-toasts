@@ -9,11 +9,9 @@ import {
 } from "./constants";
 
 export class Toast {
-    private options: ToastOptions;
     private element: HTMLDivElement;
 
-    public constructor(options: ToastOptions) {
-        this.options = options;
+    public constructor(private options: ToastOptions) {
         this.element = this.createToastElement();
     }
 
@@ -23,7 +21,7 @@ export class Toast {
             this.options.type || DEFAULT_TOAST_TYPE
         }-toast ${this.options.className || ""} `.trim();
 
-        const icon = getAsset(this.options.type || DEFAULT_TOAST_TYPE);
+        const icon = this.getIcon();
         if (icon) {
             const iconContainer = document.createElement("div");
             iconContainer.className = TOAST_ICON_CLASS;
@@ -40,6 +38,13 @@ export class Toast {
         });
 
         return toast;
+    }
+
+    private getIcon(): string | null {
+        if (this.options.showIcon === false) {
+            return null;
+        }
+        return getAsset(this.options.type || DEFAULT_TOAST_TYPE);
     }
 
     public getElement(): HTMLDivElement {
