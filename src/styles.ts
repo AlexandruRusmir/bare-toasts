@@ -100,6 +100,18 @@ export const styles = `
     animation: slide-in-right 0.5s forwards;
 }
 
+.toast-container.top-center .default-toast.fade-out, .toast-container.bottom-center .default-toast.fade-out {
+    animation: fade-out 0.5s forwards;
+}
+
+.toast-container.top-left .default-toast.fade-out, .toast-container.bottom-left .default-toast.fade-out {
+    animation: fade-out-left 0.5s forwards;
+}
+
+.toast-container.top-right .default-toast.fade-out, .toast-container.bottom-right .default-toast.fade-out {
+    animation: fade-out-right 0.5s forwards;
+}
+
 @keyframes slide-in-left {
     from {
         transform: translateX(-100%);
@@ -141,6 +153,37 @@ export const styles = `
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out-left {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out-right {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
     }
 }
 `;

@@ -6,6 +6,8 @@ import {
     DEFAULT_TOAST_DURATION,
     TOAST_CLASS,
     TOAST_ICON_CLASS,
+    FADE_OUT_DURATION,
+    FADE_OUT_CLASS,
 } from "./constants";
 
 export class Toast {
@@ -52,10 +54,13 @@ export class Toast {
     }
 
     public show(): void {
-        setTimeout(
-            () => this.hide(),
-            this.options.duration || DEFAULT_TOAST_DURATION
-        );
+        const duration = this.options.duration || DEFAULT_TOAST_DURATION;
+        setTimeout(() => this.addFadeOut(), duration);
+        setTimeout(() => this.hide(), duration + FADE_OUT_DURATION);
+    }
+
+    private addFadeOut(): void {
+        this.element.classList.add(FADE_OUT_CLASS);
     }
 
     private hide(): void {
