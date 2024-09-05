@@ -15,4 +15,6 @@ export interface ToastOptions {
     showIcon?: boolean;
     className?: string;
     styles?: Partial<CSSStyleDeclaration>;
+    onShow?: () => void;
+    onHide?: () => void;
 }

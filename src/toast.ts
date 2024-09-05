@@ -22,6 +22,8 @@ export class Toast {
         toast.className = `${TOAST_CLASS} ${
             this.options.type || DEFAULT_TOAST_TYPE
         }-toast ${this.options.className || ""} `.trim();
+        toast.setAttribute("role", "alert");
+        toast.setAttribute("aria-live", "assertive");
 
         const icon = this.getIcon();
         if (icon) {
@@ -55,8 +57,13 @@ export class Toast {
 
     public show(): void {
         const duration = this.options.duration || DEFAULT_TOAST_DURATION;
+        if (this.options.onShow) {
+            this.options.onShow();
+        }
         setTimeout(() => this.addFadeOut(), duration);
-        setTimeout(() => this.hide(), duration + FADE_OUT_DURATION);
+        setTimeout(() => {
+            this.hide();
+        }, duration + FADE_OUT_DURATION);
     }
 
     private addFadeOut(): void {
@@ -64,6 +71,9 @@ export class Toast {
     }
 
     private hide(): void {
+        if (this.options.onHide) {
+            this.options.onHide();
+        }
         this.element.remove();
     }
 }
