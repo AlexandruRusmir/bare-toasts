@@ -2,8 +2,6 @@
 
 A minimalistic, toast notification library.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6ejOoh3uS0w?si=K8un7p112kP6CFOc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Warning
 
 > ⚠️ **This package is in the early stages of development. Features and APIs are subject to change.**
