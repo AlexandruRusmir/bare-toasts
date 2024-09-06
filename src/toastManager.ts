@@ -1,12 +1,8 @@
 import { Toast } from "./toast";
 import { Position, ToastOptions } from "./types";
-import { containerStyles, Positiontyles } from "./styles";
+import { containerStyles, positionStyles } from "./styles";
 import { applyStyles } from "./utils";
-import {
-    DEFAULT_POSITION,
-    TOAST_CONTAINER_CLASS,
-    POSITIONS,
-} from "./constants";
+import { DEFAULT_POSITION, POSITIONS } from "./constants";
 
 export class ToastManager {
     private static instance: ToastManager;
@@ -34,9 +30,8 @@ export class ToastManager {
             return;
         }
         const container = document.createElement("div");
-        container.className = `${TOAST_CONTAINER_CLASS} ${position}`;
         applyStyles(container, containerStyles);
-        applyStyles(container, Positiontyles[position]);
+        applyStyles(container, positionStyles[position]);
         document.body.appendChild(container);
         this.containers[position] = container;
     }
@@ -48,7 +43,7 @@ export class ToastManager {
     }
 
     public createToast(options: ToastOptions): void {
-        const position = options.position || DEFAULT_POSITION;
+        const position = options.position ?? DEFAULT_POSITION;
         this.ensureContainerExists(position);
         const container = this.containers[position];
         if (!container) {

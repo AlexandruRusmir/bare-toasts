@@ -7,7 +7,7 @@ export const containerStyles: Partial<CSSStyleDeclaration> = {
     gap: "0.625rem",
 };
 
-export const Positiontyles: Record<Position, Partial<CSSStyleDeclaration>> = {
+export const positionStyles: Record<Position, Partial<CSSStyleDeclaration>> = {
     "top-center": {
         top: "0.625rem",
         left: "50%",
@@ -60,7 +60,7 @@ export const toastStyles: Partial<CSSStyleDeclaration> = {
     opacity: "0",
 };
 
-export const ToastTypetyles: Partial<
+export const toastTypeStyles: Partial<
     Record<ToastType, Partial<CSSStyleDeclaration>>
 > = {
     success: { backgroundColor: "#4caf50" },

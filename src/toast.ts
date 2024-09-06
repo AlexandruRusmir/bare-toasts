@@ -5,12 +5,10 @@ import { addSlideInAnimation, addFadeOutAnimation } from "./animations";
 import {
     DEFAULT_TOAST_TYPE,
     DEFAULT_TOAST_DURATION,
-    TOAST_CLASS,
-    TOAST_ICON_CLASS,
     FADE_OUT_DURATION,
     DEFAULT_POSITION,
 } from "./constants";
-import { toastStyles, ToastTypetyles, iconStyles } from "./styles";
+import { toastStyles, iconStyles, toastTypeStyles } from "./styles";
 
 export class Toast {
     private element: HTMLDivElement;
@@ -37,16 +35,13 @@ export class Toast {
 
     private createToastElement(): HTMLDivElement {
         const toast = document.createElement("div");
-        toast.className = `${TOAST_CLASS} ${this.options.type}-toast ${
-            this.options.className || ""
-        } `.trim();
+        toast.className = `${this.options.className ?? ""}`.trim();
         toast.setAttribute("role", "alert");
         toast.setAttribute("aria-live", "assertive");
 
         const icon = this.getIcon();
         if (icon) {
             const iconContainer = document.createElement("div");
-            iconContainer.className = TOAST_ICON_CLASS;
             iconContainer.innerHTML = icon;
             applyStyles(iconContainer, iconStyles);
             toast.appendChild(iconContainer);
@@ -57,7 +52,7 @@ export class Toast {
         toast.appendChild(messageContainer);
 
         applyStyles(toast, toastStyles);
-        applyStyles(toast, ToastTypetyles[this.options.type!]!);
+        applyStyles(toast, toastTypeStyles[this.options.type!]!);
         if (this.options.styles) {
             applyStyles(toast, this.options.styles);
         }

@@ -43,5 +43,5 @@ const iconMap: { [key in ToastType]?: string } = {
 };
 
 export const getAsset = (type: ToastType): string | null => {
-    return iconMap[type] || null;
+    return iconMap[type] ?? null;
 };
