@@ -1,4 +1,4 @@
-import { Positions, ToastOptions } from "./types";
+import { Position, ToastOptions } from "./types";
 import { applyStyles } from "./utils";
 import { getAsset } from "./assets";
 import { addSlideInAnimation, addFadeOutAnimation } from "./animations";
@@ -10,7 +10,7 @@ import {
     FADE_OUT_DURATION,
     DEFAULT_POSITION,
 } from "./constants";
-import { toastStyles, toastTypeStyles, iconStyles } from "./styles";
+import { toastStyles, ToastTypetyles, iconStyles } from "./styles";
 
 export class Toast {
     private element: HTMLDivElement;
@@ -57,7 +57,7 @@ export class Toast {
         toast.appendChild(messageContainer);
 
         applyStyles(toast, toastStyles);
-        applyStyles(toast, toastTypeStyles[this.options.type!]!);
+        applyStyles(toast, ToastTypetyles[this.options.type!]!);
         if (this.options.styles) {
             applyStyles(toast, this.options.styles);
         }

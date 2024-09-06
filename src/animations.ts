@@ -1,4 +1,4 @@
-import { Positions } from "./types";
+import { Position } from "./types";
 import {
     SLIDE_IN_KEYFRAMES,
     FADE_OUT_KEYFRAMES,
@@ -7,7 +7,7 @@ import {
 
 export function addSlideInAnimation(
     element: HTMLElement,
-    position: Positions
+    position: Position
 ): void {
     const keyframes = SLIDE_IN_KEYFRAMES[position];
     element.animate(keyframes, ANIMATION_OPTIONS);
@@ -15,7 +15,7 @@ export function addSlideInAnimation(
 
 export function addFadeOutAnimation(
     element: HTMLElement,
-    position: Positions
+    position: Position
 ): void {
     const keyframes = FADE_OUT_KEYFRAMES[position];
     element.animate(keyframes, ANIMATION_OPTIONS);

@@ -1,6 +1,6 @@
 import { Toast } from "./toast";
-import { Positions, ToastOptions } from "./types";
-import { containerStyles, positionStyles } from "./styles";
+import { Position, ToastOptions } from "./types";
+import { containerStyles, Positiontyles } from "./styles";
 import { applyStyles } from "./utils";
 import {
     DEFAULT_POSITION,
@@ -10,7 +10,7 @@ import {
 
 export class ToastManager {
     private static instance: ToastManager;
-    private containers: Partial<Record<Positions, HTMLDivElement>> = {};
+    private containers: Partial<Record<Position, HTMLDivElement>> = {};
 
     private constructor() {
         this.createContainers();
@@ -29,19 +29,19 @@ export class ToastManager {
         }
     }
 
-    private createContainer(position: Positions): void {
+    private createContainer(position: Position): void {
         if (this.containers[position]) {
             return;
         }
         const container = document.createElement("div");
         container.className = `${TOAST_CONTAINER_CLASS} ${position}`;
         applyStyles(container, containerStyles);
-        applyStyles(container, positionStyles[position]);
+        applyStyles(container, Positiontyles[position]);
         document.body.appendChild(container);
         this.containers[position] = container;
     }
 
-    private ensureContainerExists(position: Positions): void {
+    private ensureContainerExists(position: Position): void {
         if (!this.containers[position]) {
             this.createContainer(position);
         }

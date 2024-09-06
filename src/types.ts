@@ -1,5 +1,5 @@
-export type ToastTypes = "normal" | "success" | "info" | "warning" | "error";
-export type Positions =
+export type ToastType = "normal" | "success" | "info" | "warning" | "error";
+export type Position =
     | "top-left"
     | "top-right"
     | "bottom-left"
@@ -9,8 +9,8 @@ export type Positions =
 
 export interface ToastOptions {
     message: string;
-    type?: ToastTypes;
-    position?: Positions;
+    type?: ToastType;
+    position?: Position;
     duration?: number;
     showIcon?: boolean;
     className?: string;

@@ -1,6 +1,6 @@
 {
     "name": "bare-toasts",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "A lightweight, framework-agnostic, customizable toast library.",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",

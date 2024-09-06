@@ -1,4 +1,4 @@
-import { Positions, ToastTypes } from "./types";
+import { Position, ToastType } from "./types";
 
 export const containerStyles: Partial<CSSStyleDeclaration> = {
     position: "fixed",
@@ -7,7 +7,7 @@ export const containerStyles: Partial<CSSStyleDeclaration> = {
     gap: "0.625rem",
 };
 
-export const positionStyles: Record<Positions, Partial<CSSStyleDeclaration>> = {
+export const Positiontyles: Record<Position, Partial<CSSStyleDeclaration>> = {
     "top-center": {
         top: "0.625rem",
         left: "50%",
@@ -60,8 +60,8 @@ export const toastStyles: Partial<CSSStyleDeclaration> = {
     opacity: "0",
 };
 
-export const toastTypeStyles: Partial<
-    Record<ToastTypes, Partial<CSSStyleDeclaration>>
+export const ToastTypetyles: Partial<
+    Record<ToastType, Partial<CSSStyleDeclaration>>
 > = {
     success: { backgroundColor: "#4caf50" },
     info: { backgroundColor: "#2196f3" },

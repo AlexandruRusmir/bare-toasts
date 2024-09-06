@@ -1,4 +1,4 @@
-import { ToastTypes } from "./types";
+import { ToastType } from "./types";
 
 const bellIcon = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="20" width="20">
@@ -34,7 +34,7 @@ const errorIcon = `
     <circle cx="24.5" cy="39" r="3.5" fill="#f44336"/>
 </svg>`;
 
-const iconMap: { [key in ToastTypes]?: string } = {
+const iconMap: { [key in ToastType]?: string } = {
     normal: bellIcon,
     success: successIcon,
     info: infoIcon,
@@ -42,6 +42,6 @@ const iconMap: { [key in ToastTypes]?: string } = {
     error: errorIcon,
 };
 
-export const getAsset = (type: ToastTypes): string | null => {
+export const getAsset = (type: ToastType): string | null => {
     return iconMap[type] || null;
 };
