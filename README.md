@@ -2,13 +2,9 @@
 
 A minimalistic, toast notification library.
 
-## Warning
-
-> ⚠️ **This package is in the early stages of development. Features and APIs are subject to change.**
-
 ## Features
 
--   **Framework Agnostic:** Works seamlessly with any JavaScript framework.
+-   **Framework Agnostic:** Works seamlessly with any JavaScript framework/library.
 -   **Lightweight:** Minimal overhead.
 -   **Customizable:** Easy to customize toast appearance and behavior.
 
