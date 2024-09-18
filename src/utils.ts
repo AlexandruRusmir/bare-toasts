@@ -1,6 +1,6 @@
-export function applyStyles(
+export const applyStyles = (
     element: HTMLElement,
     styles: Partial<CSSStyleDeclaration>
-): void {
+): void => {
     Object.assign(element.style, styles);
-}
+};

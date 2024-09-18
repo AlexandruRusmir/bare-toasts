@@ -5,18 +5,18 @@ import {
     ANIMATION_OPTIONS,
 } from "./constants";
 
-export function addSlideInAnimation(
+export const addSlideInAnimation = (
     element: HTMLElement,
     position: Position
-): void {
+): void => {
     const keyframes = SLIDE_IN_KEYFRAMES[position];
     element.animate(keyframes, ANIMATION_OPTIONS);
-}
+};
 
-export function addFadeOutAnimation(
+export const addFadeOutAnimation = (
     element: HTMLElement,
     position: Position
-): void {
+): void => {
     const keyframes = FADE_OUT_KEYFRAMES[position];
     element.animate(keyframes, ANIMATION_OPTIONS);
-}
+};

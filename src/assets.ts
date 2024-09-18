@@ -34,7 +34,7 @@ const errorIcon = `
     <circle cx="24.5" cy="39" r="3.5" fill="#f44336"/>
 </svg>`;
 
-const iconMap: { [key in ToastType]?: string } = {
+const iconMap: Record<ToastType, string> = {
     normal: bellIcon,
     success: successIcon,
     info: infoIcon,
