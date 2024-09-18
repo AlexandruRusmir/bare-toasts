@@ -2,7 +2,7 @@
 
 A minimalistic, toast notification library.
 
-<iframe style="width: 100%; height: auto; aspect-ratio: 16/9; margin: 0.5rem 0;" src="https://www.youtube.com/embed/1gbMW7YeOLw?si=TmD7zRVtOBZS3l_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[Watch the demo](https://youtu.be/1gbMW7YeOLw)
 
 ## Features
 
